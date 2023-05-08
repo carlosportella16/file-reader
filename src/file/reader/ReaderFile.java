@@ -31,6 +31,11 @@ public class ReaderFile {
 			while (rowIterator.hasNext()) {
 				// get line
 				Row row = rowIterator.next();
+				
+				// Skip the header row
+				if(row.getRowNum() == 0) {
+					continue;
+				}
 
 				// get all the cells of this line
 				Iterator<Cell> cellIterator = row.cellIterator();
@@ -68,5 +73,6 @@ public class ReaderFile {
 
 		return employees;
 	}
+	
 
 }
