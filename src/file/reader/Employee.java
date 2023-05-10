@@ -7,15 +7,16 @@ public class Employee implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private String email;
-	private Integer age;
-	private Double salary;
+	private String age;
+	private String salary;
 	private String department;
 
 	public Employee() {
 
 	}
 
-	public Employee(String name, String email, Integer age, Double salary, String department) {
+	public Employee(String name, String email, String age, String salary, String department) {
+		super();
 		this.name = name;
 		this.email = email;
 		this.age = age;
@@ -39,19 +40,19 @@ public class Employee implements Serializable {
 		this.email = email;
 	}
 
-	public Integer getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(Integer age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 
-	public Double getSalary() {
+	public String getSalary() {
 		return salary;
 	}
 
-	public void setSalary(Double salary) {
+	public void setSalary(String salary) {
 		this.salary = salary;
 	}
 
@@ -65,7 +66,7 @@ public class Employee implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Employee [name=" + name + ", email=" + email + ", age=" + age + ", salary=" + salary + ", department="
+		return "Employee [" + name + ", " + email + ", " + age + ", " + salary + ", "
 				+ department + "]";
 	}
 
